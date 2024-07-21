@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins&display=swap');
+
+/* Palette
+https: //paletton.com/#uid=33S0U0kkkjv8hzCeZproCf4xu7B
+*/
+
+:root {
+	--color-primary: #2f396a;
+	--color-primary-light: #525C8A;
+	--color-primary-lighter: #8E95B7;
+	--color-secondary: #306f88;
+	--color-on-primary: #eeeeee;
+
+	--color-gradient: linear-gradient(90deg, var(--color-primary), var(--color-secondary));
+
+	--app-grid-gap: 0rem;
+	--app-grid-columns: 1;
+	--app-max-width: 960px;
+	--section-padding: 2rem 1rem;
+
+	--font-size-large: 2rem;
+	--font-size-medium: 1.5rem;
+	--font-size-normal: 1rem;
+
+}
+
+/*
+ * Media query for screens wider then 576px
+*/
+@media screen and (min-width: 576px) {
+	:root {
+		--app-grid-columns: 2;
+		--app-grid-gap: 2rem;
+		--font-size-normal: 1.2rem;
+		--section-padding: 4rem 2rem;
+	}
+}
+
+@media screen and (min-width: 992px) {
+	:root {
+		--font-size-medium: 2rem;
+		--font-size-large: 3rem;
+	}
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: "Poppins", sans-serif;
+	font-size: var(--font-size-normal);
+}
+
+.app {
+	display: flex;
+	flex-direction: column;
+}
+
+.section {
+	display: flex;
+	justify-content: center;
+	padding: var(--section-padding);
+}
+
+.section__content {
+	width: 100%;
+	max-width: var(--app-max-width);
+}
+
+.section--dark {
+	background-color: var(--color-primary);
+	color: var(--color-on-primary);
+}
+
+.section--secondary {
+	background-color: var(--color-secondary);
+	color: var(--color-on-primary);
+}
+
+.section--dark a,
+.section--secondary a {
+	color: var(--color-on-primary);
+}
+
+.layout-box__image {
+	width: 100%;
+	box-sizing: border-box;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.layout-box__image>img {
+	border-radius: 1rem;
+	width: 100%;
+}
+
+.layout-box__content {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.layout-box__content hr {
+	width: 100%;
+}
+
+.hero__image {
+	padding: 0 2rem;
+}
+
+.hero__image>img {
+	max-width: 360px;
+	border-radius: 1rem;
+}
+
+.hero__content {
+	text-align: center;
+	align-items: center;
+}
+
+
+/*
+ * Typography
+ */
+
+h1 {
+	font-size: var(--font-size-large);
+	font-weight: normal;
+	font-family: "Montserrat";
+	text-transform: uppercase;
+}
+
+h2 {
+	font-size: var(--font-size-medium);
+	font-weight: normal;
+	font-family: "Montserrat";
+	text-transform: uppercase;
+}
+
+a {
+	color: var(--color-primary);
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+.text--medium {
+	font-size: var(--font-size-medium);
+}
+
+.text--large {
+	font-size: var(--font-size-large);
+}
+
+/*
+ * Layout
+ */
+
+.layout-box {
+	display: flex;
+	flex-wrap: wrap;
+	gap: var(--app-grid-gap);
+}
+
+.layout-box>* {
+	box-sizing: border-box;
+	flex: calc((100% - ((var(--app-grid-columns) - 1) * var(--app-grid-gap))) / var(--app-grid-columns));
+}
+
+.layout-box--assym>* {
+	flex: calc((100% - ((var(--app-grid-columns) - 1) * var(--app-grid-gap))) / var(--app-grid-columns) * 1.35);
+}
+
+.layout-box--assym>*:first-child,
+.layout-box--assym>*:nth-child(3) {
+	flex: calc((100% - ((var(--app-grid-columns) - 1) * var(--app-grid-gap))) / var(--app-grid-columns) * 0.65);
+}
+
+
+
+/*
+ * Utily classes
+ */
+
+.p-1 {
+	padding: 1rem;
+}
+
+.p-2 {
+	padding: 2rem;
+}
