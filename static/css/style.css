@@ -118,6 +118,10 @@ body {
 	align-items: center;
 }
 
+.hero__content img {
+	margin-top: 1em;
+}
+
 
 /*
  * Typography
