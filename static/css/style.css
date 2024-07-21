@@ -1,17 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins&display=swap');
 
-/* Palette
-https: //paletton.com/#uid=33S0U0kkkjv8hzCeZproCf4xu7B
-*/
-
 :root {
 	--color-primary: #2f396a;
 	--color-primary-light: #525C8A;
 	--color-primary-lighter: #8E95B7;
 	--color-secondary: #306f88;
+	--color-secondary-light: hsl(197, 48%, 56%);
+	--color-secondary-lighter: hsl(197, 48%, 80%);
 	--color-on-primary: #eeeeee;
 
-	--color-gradient: linear-gradient(90deg, var(--color-primary), var(--color-secondary));
+	--primary-gradient: linear-gradient(135deg, var(--color-secondary), var(--color-primary));
+	--secondary-gradient: linear-gradient(135deg, var(--color-secondary-light), var(--color-secondary));
 
 	--app-grid-gap: 0rem;
 	--app-grid-columns: 1;
@@ -67,18 +66,18 @@ body {
 }
 
 .section--dark {
-	background-color: var(--color-primary);
+	background: var(--primary-gradient);
 	color: var(--color-on-primary);
 }
 
 .section--secondary {
-	background-color: var(--color-secondary);
+	background: var(--secondary-gradient);
 	color: var(--color-on-primary);
 }
 
 .section--dark a,
 .section--secondary a {
-	color: var(--color-on-primary);
+	color: var(--color-secondary-lighter);
 }
 
 .layout-box__image {
@@ -149,6 +148,10 @@ a:hover {
 
 .text--medium {
 	font-size: var(--font-size-medium);
+}
+
+.text--secondary-lighter {
+	color: var(--color-secondary-lighter);
 }
 
 .text--large {
