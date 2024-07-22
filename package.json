@@ -1,0 +1,23 @@
+{
+  "name": "blanche",
+  "version": "0.1.0",
+  "description": "blanche.sipocz.info website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "serve": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/glinto/blanche.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/glinto/blanche/issues"
+  },
+  "homepage": "https://github.com/glinto/blanche#readme",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
